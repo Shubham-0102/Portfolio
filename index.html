@@ -3,417 +3,256 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shubham Yadav - Frontend Developer & AI Enthusiast</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Shubham Yadav | AI & Web Portfolio</title>
+    <meta name="description" content="Portfolio of Shubham Yadav, crafting AI solutions & smart web experiences.">
+    <link rel="icon" type="image/jpeg" href="1736651956178.jpeg">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- AOS Animation CDN -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', 'Roboto', sans-serif; }
+        .neon-border:hover { box-shadow: 0 0 0 2px #0fffc3, 0 0 16px #3b82f6; border-color: #0fffc3 !important; }
+        .glow-btn:hover { box-shadow: 0 0 16px 2px #0fffc3, 0 0 32px #3b82f6; border-color: #0fffc3 !important; }
+        .nav-icon:hover { color: #0fffc3 !important; transform: scale(1.15); }
+        .bg-hero-animate {
+            background: linear-gradient(120deg, #10182a 0%, #1a1f3c 60%, #0fffc3 100%);
+            animation: gradientMove 8s ease-in-out infinite alternate;
+            background-size: 200% 200%;
+        }
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+    </style>
 </head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <span>SY</span>
+<body class="bg-[#10182a] text-slate-100 min-h-screen">
+    <!-- Sticky Navbar -->
+    <header class="sticky top-0 z-50 w-full bg-[#10182a]/80 backdrop-blur border-b border-[#1a1f3c] shadow-sm">
+        <nav class="max-w-6xl mx-auto flex items-center justify-between py-3 px-4 md:px-8">
+            <div class="flex items-center gap-3">
+                <img src="1736651956178.jpeg" alt="Shubham Yadav" class="w-9 h-9 rounded-full border-2 border-[#0fffc3] shadow-sm">
+                <span class="font-bold text-lg tracking-tight text-[#0fffc3]">Shubham Yadav</span>
             </div>
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="#home" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#about" class="nav-link">About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#skills" class="nav-link">Skills</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#projects" class="nav-link">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#research" class="nav-link">Research</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contact" class="nav-link">Contact</a>
-                </li>
+            <ul class="flex gap-6 font-semibold text-slate-200">
+                <li><a href="#hero" class="nav-icon transition-colors duration-200"><svg class="w-6 h-6 inline" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0h6"></path></svg></a></li>
+                <li><a href="#education" class="nav-icon transition-colors duration-200"><svg class="w-6 h-6 inline" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="5" rx="2" /></svg></a></li>
+                <li><a href="#projects" class="nav-icon transition-colors duration-200"><svg class="w-6 h-6 inline" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="5" rx="2" /></svg></a></li>
+                <li><a href="#skills" class="nav-icon transition-colors duration-200"><svg class="w-6 h-6 inline" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></a></li>
+                <li><a href="#certs" class="nav-icon transition-colors duration-200"><svg class="w-6 h-6 inline" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10.5a8.38 8.38 0 01-1.9.8 4.48 4.48 0 00-7.6 4v1A4.5 4.5 0 003 19.5V20"/></svg></a></li>
+                <li><a href="#contact" class="nav-icon transition-colors duration-200"><svg class="w-6 h-6 inline" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10.5a8.38 8.38 0 01-1.9.8 4.48 4.48 0 00-7.6 4v1A4.5 4.5 0 003 19.5V20"/></svg></a></li>
             </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <div class="hero-profile">
-                        <img src="1736651956178.jpeg" alt="Shubham Yadav" class="profile-image">
-                    </div>
-                    <h1 class="hero-title">
-                        Hi, I'm <span class="highlight">Shubham Yadav</span>
-                    </h1>
-                    <h2 class="hero-subtitle">Frontend Developer & AI Enthusiast</h2>
-                    <p class="hero-tagline">
-                        Crafting smart, user-friendly web applications with a passion for AI and innovative technology.
-                    </p>
-                    <div class="hero-buttons">
-                        <a href="#projects" class="btn btn-primary">View My Projects</a>
-                        <a href="#contact" class="btn btn-secondary">Contact Me</a>
-                    </div>
-                </div>
-                <div class="hero-visual">
-                    <div class="code-animation">
-                        <div class="code-line">const developer = {</div>
-                        <div class="code-line indent">name: "Shubham Yadav",</div>
-                        <div class="code-line indent">role: "Frontend Developer",</div>
-                        <div class="code-line indent">passion: "AI & Innovation",</div>
-                        <div class="code-line indent">status: "Ready to build"</div>
-                        <div class="code-line">};</div>
-                    </div>
-                </div>
+    <section id="hero" class="relative flex flex-col items-center justify-center min-h-screen w-full bg-hero-animate overflow-hidden">
+        <div class="relative z-10 flex flex-col items-center gap-8 text-center px-4" data-aos="fade-up">
+            <div class="relative mb-2">
+                <span class="absolute inset-0 rounded-full bg-gradient-to-tr from-[#0fffc3] via-[#3b82f6] to-[#a855f7] blur-lg opacity-70 animate-spin-slow"></span>
+                <img src="1736651956178.jpeg" alt="Shubham Yadav" class="relative w-32 h-32 rounded-full border-4 border-[#0fffc3] shadow-xl object-cover">
+            </div>
+            <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight text-white font-sans">
+                <span class="block text-transparent bg-clip-text bg-gradient-to-r from-[#0fffc3] via-[#3b82f6] to-[#a855f7]">Shubham Yadav</span>
+            </h1>
+            <h2 class="text-2xl md:text-3xl font-bold text-[#a5b4fc] tracking-wide mb-2 font-sans">AI & Web Enthusiast <span class="text-[#0fffc3]">|</span> Problem Solver</h2>
+            <p class="text-xl md:text-2xl text-slate-300 font-medium max-w-xl mb-2">Turning ideas into intelligent interfaces.</p>
+            <div class="flex gap-6 justify-center mb-2">
+                <a href="https://linkedin.com/in/shubham-yadav-4b9235331" target="_blank" rel="noopener noreferrer" class="group">
+                    <span class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#10182a] shadow-lg transition-all group-hover:shadow-[0_0_16px_4px_#0fffc3]">
+                        <svg class="w-6 h-6 text-[#0fffc3] group-hover:text-[#3b82f6] transition" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.28c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zm15.5 11.28h-3v-5.6c0-1.34-.03-3.07-1.87-3.07-1.87 0-2.16 1.46-2.16 2.97v5.7h-3v-10h2.89v1.36h.04c.4-.75 1.38-1.54 2.84-1.54 3.04 0 3.6 2 3.6 4.59v5.59z"/>
+                        </svg>
+                    </span>
+                </a>
+                <a href="https://github.com/Shubham-0102" target="_blank" rel="noopener noreferrer" class="group">
+                    <span class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#10182a] shadow-lg transition-all group-hover:shadow-[0_0_16px_4px_#3b82f6]">
+                        <svg class="w-6 h-6 text-[#3b82f6] group-hover:text-[#0fffc3] transition" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.34-1.3-1.7-1.3-1.7-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.74-1.56-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 012.9-.39c.99.01 1.99.13 2.9.39 2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.69 5.41-5.25 5.7.42.36.79 1.09.79 2.2 0 1.59-.01 2.87-.01 3.26 0 .31.21.68.8.56C20.71 21.39 24 17.08 24 12c0-6.27-5.23-11.5-12-11.5z"/>
+                        </svg>
+                    </span>
+                </a>
+            </div>
+            <div class="flex gap-6 justify-center mt-2">
+                <a href="#projects" class="px-7 py-3 rounded-full bg-gradient-to-r from-[#0fffc3] via-[#3b82f6] to-[#a855f7] text-[#10182a] font-bold text-lg shadow-lg glow-btn transition-all">View My Work</a>
+                <a href="#" class="px-7 py-3 rounded-full bg-[#10182a] border-2 border-[#0fffc3] text-[#0fffc3] font-bold text-lg shadow-lg glow-btn transition-all">Download CV</a>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>
-                        I'm a Computer Science student with a deep focus on frontend development and artificial intelligence. 
-                        My journey in tech is driven by a passion for creating interactive, responsive web applications that 
-                        make a real impact on users' lives.
-                    </p>
-                    <p>
-                        Recently, I completed a comprehensive healthcare chatbot project that leverages AI to provide 
-                        preliminary medical advice, demonstrating my ability to bridge the gap between cutting-edge 
-                        technology and practical user needs.
-                    </p>
-                    <p>
-                        I'm constantly exploring new technologies and taking on challenging AI-related assignments 
-                        and projects. My goal is to build applications that are not just functional, but intelligent 
-                        and user-centric.
-                    </p>
-                </div>
-                <div class="about-stats">
-                    <div class="stat-item">
-                        <div class="stat-number">3+</div>
-                        <div class="stat-label">Projects Completed</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">2+</div>
-                        <div class="stat-label">Research Papers</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">100%</div>
-                        <div class="stat-label">Passion for Tech</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2 class="section-title">Skills & Technologies</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3 class="skill-category-title">
-                        <i class="fas fa-code"></i>
-                        Frontend Development
-                    </h3>
-                    <div class="skill-items">
-                        <div class="skill-item">HTML5</div>
-                        <div class="skill-item">CSS3</div>
-                        <div class="skill-item">JavaScript</div>
-                        <div class="skill-item">React</div>
-                        <div class="skill-item">Bootstrap</div>
-                    </div>
-                </div>
-                
-                <div class="skill-category">
-                    <h3 class="skill-category-title">
-                        <i class="fas fa-server"></i>
-                        Backend Development
-                    </h3>
-                    <div class="skill-items">
-                        <div class="skill-item">Node.js</div>
-                        <div class="skill-item">Flask</div>
-                        <div class="skill-item">Express.js</div>
-                    </div>
-                </div>
-                
-                <div class="skill-category">
-                    <h3 class="skill-category-title">
-                        <i class="fas fa-brain"></i>
-                        AI & Machine Learning
-                    </h3>
-                    <div class="skill-items">
-                        <div class="skill-item">Python</div>
-                        <div class="skill-item">spaCy</div>
-                        <div class="skill-item">pandas</div>
-                        <div class="skill-item">Scikit-learn</div>
-                    </div>
-                </div>
-                
-                <div class="skill-category">
-                    <h3 class="skill-category-title">
-                        <i class="fas fa-database"></i>
-                        Databases
-                    </h3>
-                    <div class="skill-items">
-                        <div class="skill-item">MongoDB</div>
-                        <div class="skill-item">SQLite</div>
-                    </div>
-                </div>
-                
-                <div class="skill-category">
-                    <h3 class="skill-category-title">
-                        <i class="fas fa-tools"></i>
-                        Tools & Platforms
-                    </h3>
-                    <div class="skill-items">
-                        <div class="skill-item">Git</div>
-                        <div class="skill-item">VS Code</div>
-                        <div class="skill-item">Google Colab</div>
-                    </div>
-                </div>
+    <!-- Education Section -->
+    <section id="education" class="max-w-3xl mx-auto py-16 px-4" data-aos="fade-up">
+        <div class="bg-[#181f2e] rounded-2xl shadow-lg p-8 border border-[#232b3e]">
+            <h2 class="text-2xl md:text-3xl font-bold mb-4 text-[#0fffc3]">Education</h2>
+            <div class="space-y-2">
+                <div class="font-semibold text-lg">BSc (Hons) Computer Science with Artificial Intelligence</div>
+                <div class="text-slate-300">Sunway College Kathmandu – Affiliated with Birmingham City University</div>
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="MyPocketDoctor Healthcare App">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">MyPocketDoctor</h3>
-                        <p class="project-description">
-                            A comprehensive full-stack healthcare application for booking appointments and 
-                            providing chatbot consultations. Features user authentication, appointment scheduling, 
-                            and AI-powered medical assistance.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Flask</span>
-                            <span class="tech-tag">MongoDB</span>
-                            <span class="tech-tag">JavaScript</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link">
-                                <i class="fab fa-github"></i> View Code
-                            </a>
-                            <a href="#" class="project-link">
-                                <i class="fas fa-external-link-alt"></i> Live Demo
-                            </a>
-                        </div>
-                    </div>
+    <section id="projects" class="max-w-6xl mx-auto py-20 px-4">
+        <h2 class="text-3xl font-bold mb-12 text-[#0fffc3] text-center">Projects</h2>
+        <div class="grid gap-10 md:grid-cols-2">
+            <!-- MyPocketDoctor -->
+            <div class="bg-[#181f2e] rounded-2xl shadow-lg p-8 transition-transform transform hover:scale-105 neon-border" data-aos="fade-up">
+                <h3 class="text-xl font-bold text-white mb-2">🩺 MyPocketDoctor – AI-based Medical Booking Web App</h3>
+                <div class="text-slate-400 mb-1 font-mono text-sm">Frontend Developer | Team: Fightclub</div>
+                <div class="flex flex-wrap gap-2 mb-2">
+                    <span class="bg-[#10182a] text-[#0fffc3] px-3 py-1 rounded-full text-xs font-semibold">HTML</span>
+                    <span class="bg-[#10182a] text-[#0fffc3] px-3 py-1 rounded-full text-xs font-semibold">CSS</span>
+                    <span class="bg-[#10182a] text-[#0fffc3] px-3 py-1 rounded-full text-xs font-semibold">JavaScript</span>
+                    <span class="bg-[#10182a] text-[#0fffc3] px-3 py-1 rounded-full text-xs font-semibold">Flask</span>
+                    <span class="bg-[#10182a] text-[#0fffc3] px-3 py-1 rounded-full text-xs font-semibold">SQLite</span>
                 </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Healthcare Chatbot AI">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Healthcare Chatbot</h3>
-                        <p class="project-description">
-                            An AI-powered chatbot that provides preliminary medical advice using natural 
-                            language processing. Integrated with web interface for seamless user interaction 
-                            and symptom analysis.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">NLP</span>
-                            <span class="tech-tag">Web Integration</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link">
-                                <i class="fab fa-github"></i> View Code
-                            </a>
-                            <a href="#" class="project-link">
-                                <i class="fas fa-external-link-alt"></i> Live Demo
-                            </a>
-                        </div>
-                    </div>
+                <ul class="list-disc list-inside text-slate-300 text-sm space-y-1 mb-2">
+                    <li>Location-based booking form (Location → Hospital → Department → Doctor → Time)</li>
+                    <li>Chatbot integration for symptom input</li>
+                    <li>Email verification, dynamic scheduling, appointment history</li>
+                    <li>Flow diagrams with draw.io</li>
+                </ul>
+            </div>
+            <!-- Hospital Management System -->
+            <div class="bg-[#181f2e] rounded-2xl shadow-lg p-8 transition-transform transform hover:scale-105 neon-border" data-aos="fade-up">
+                <h3 class="text-xl font-bold text-white mb-2">🏥 Hospital Management System – CMP4266 Programming Project</h3>
+                <div class="text-slate-400 mb-1 font-mono text-sm">Python Developer</div>
+                <div class="flex flex-wrap gap-2 mb-2">
+                    <span class="bg-[#10182a] text-[#0fffc3] px-3 py-1 rounded-full text-xs font-semibold">Python (OOP, file handling)</span>
                 </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="AI Resume Analyzer">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">AI Resume Analyzer</h3>
-                        <p class="project-description">
-                            A Python-based NLP tool that parses and scores resumes for recruiters. 
-                            Uses advanced text processing to extract key information and provide 
-                            intelligent candidate evaluation.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Flask</span>
-                            <span class="tech-tag">spaCy</span>
-                        </div>
-                        <div class="project-status">
-                            <span class="status-badge">In Progress</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link">
-                                <i class="fab fa-github"></i> View Code
-                            </a>
-                        </div>
-                    </div>
+                <ul class="list-disc list-inside text-slate-300 text-sm space-y-1 mb-2">
+                    <li>Menu-based system: registration, billing, reports</li>
+                    <li>Designed flowcharts, test cases, documentation</li>
+                </ul>
+            </div>
+            <!-- Hospital Queue Management System -->
+            <div class="bg-[#181f2e] rounded-2xl shadow-lg p-8 transition-transform transform hover:scale-105 neon-border" data-aos="fade-up">
+                <h3 class="text-xl font-bold text-white mb-2">🧾 Hospital Queue Management System – DSA Project</h3>
+                <div class="text-slate-400 mb-1 font-mono text-sm">Developer & Technical Writer</div>
+                <div class="flex flex-wrap gap-2 mb-2">
+                    <span class="bg-[#10182a] text-[#0fffc3] px-3 py-1 rounded-full text-xs font-semibold">Python</span>
                 </div>
+                <ul class="list-disc list-inside text-slate-300 text-sm space-y-1 mb-2">
+                    <li>Simulated queue using FIFO and priority heap</li>
+                    <li>Big-O notation, assertion tables, diagrams</li>
+                    <li>Viva-ready layman explanations</li>
+                </ul>
+            </div>
+            <!-- Fraud Detection -->
+            <div class="bg-[#181f2e] rounded-2xl shadow-lg p-8 transition-transform transform hover:scale-105 neon-border" data-aos="fade-up">
+                <h3 class="text-xl font-bold text-white mb-2">💳 Fraud Detection in Financial Transactions</h3>
+                <div class="text-slate-400 mb-1 font-mono text-sm">Data Analyst & Researcher</div>
+                <div class="flex flex-wrap gap-2 mb-2">
+                    <span class="bg-[#10182a] text-[#0fffc3] px-3 py-1 rounded-full text-xs font-semibold">Python</span>
+                    <span class="bg-[#10182a] text-[#0fffc3] px-3 py-1 rounded-full text-xs font-semibold">pandas</span>
+                    <span class="bg-[#10182a] text-[#0fffc3] px-3 py-1 rounded-full text-xs font-semibold">scikit-learn</span>
+                </div>
+                <ul class="list-disc list-inside text-slate-300 text-sm space-y-1 mb-2">
+                    <li>Logistic Regression model</li>
+                    <li>Missing data imputation</li>
+                    <li>Confusion matrix, R², accuracy</li>
+                    <li>2000-word research report and group viva</li>
+                </ul>
+            </div>
+            <!-- AI Resume Analyzer -->
+            <div class="bg-[#181f2e] rounded-2xl shadow-lg p-8 transition-transform transform hover:scale-105 neon-border" data-aos="fade-up">
+                <h3 class="text-xl font-bold text-white mb-2">📄 AI Resume Analyzer – Ongoing</h3>
+                <div class="text-slate-400 mb-1 font-mono text-sm">Full Stack Developer</div>
+                <div class="flex flex-wrap gap-2 mb-2">
+                    <span class="bg-[#10182a] text-[#0fffc3] px-3 py-1 rounded-full text-xs font-semibold">Python</span>
+                    <span class="bg-[#10182a] text-[#0fffc3] px-3 py-1 rounded-full text-xs font-semibold">Flask</span>
+                    <span class="bg-[#10182a] text-[#0fffc3] px-3 py-1 rounded-full text-xs font-semibold">spaCy</span>
+                    <span class="bg-[#10182a] text-[#0fffc3] px-3 py-1 rounded-full text-xs font-semibold">PyMuPDF</span>
+                </div>
+                <ul class="list-disc list-inside text-slate-300 text-sm space-y-1 mb-2">
+                    <li>Upload PDF → Parse text → NLP-based resume suggestions</li>
+                    <li>Keyword matching, role-fit, sentence clarity</li>
+                    <li>Demo planned for portfolio use</li>
+                </ul>
+            </div>
+            <!-- Political Representation Analysis -->
+            <div class="bg-[#181f2e] rounded-2xl shadow-lg p-8 transition-transform transform hover:scale-105 neon-border" data-aos="fade-up">
+                <h3 class="text-xl font-bold text-white mb-2">🗳️ Political Representation Analysis</h3>
+                <div class="text-slate-400 mb-1 font-mono text-sm">Report Contributor</div>
+                <div class="flex flex-wrap gap-2 mb-2">
+                    <span class="bg-[#10182a] text-[#0fffc3] px-3 py-1 rounded-full text-xs font-semibold">Python</span>
+                </div>
+                <ul class="list-disc list-inside text-slate-300 text-sm space-y-1 mb-2">
+                    <li>Voter/representation algorithmic analysis</li>
+                    <li>Visuals, tables, and modular report structure</li>
+                </ul>
             </div>
         </div>
     </section>
 
-    <!-- Research Section -->
-    <section id="research" class="research">
-        <div class="container">
-            <h2 class="section-title">Research & Academic Projects</h2>
-            <div class="research-grid">
-                <div class="research-card">
-                    <div class="research-icon">
-                        <i class="fas fa-microscope"></i>
-                    </div>
-                    <h3 class="research-title">Healthcare Chatbot with NLP</h3>
-                    <p class="research-description">
-                        Developed an intelligent healthcare chatbot using Natural Language Processing 
-                        and Flask framework. The system provides preliminary medical advice and 
-                        symptom analysis through conversational AI.
-                    </p>
-                    <div class="research-tech">
-                        <span class="tech-tag">NLP</span>
-                        <span class="tech-tag">Flask</span>
-                        <span class="tech-tag">AI</span>
-                    </div>
-                </div>
+    <!-- Skills Section -->
+    <section id="skills" class="max-w-5xl mx-auto py-20 px-4" data-aos="fade-up">
+        <h2 class="text-3xl font-bold mb-8 text-[#0fffc3] text-center">Technical Skills</h2>
+        <div class="flex flex-wrap gap-3 justify-center">
+            <span class="bg-[#181f2e] text-[#0fffc3] px-4 py-1 rounded-full font-semibold text-sm shadow hover:scale-105 transition">Python</span>
+            <span class="bg-[#181f2e] text-[#0fffc3] px-4 py-1 rounded-full font-semibold text-sm shadow hover:scale-105 transition">HTML</span>
+            <span class="bg-[#181f2e] text-[#0fffc3] px-4 py-1 rounded-full font-semibold text-sm shadow hover:scale-105 transition">CSS</span>
+            <span class="bg-[#181f2e] text-[#0fffc3] px-4 py-1 rounded-full font-semibold text-sm shadow hover:scale-105 transition">JavaScript</span>
+            <span class="bg-[#181f2e] text-[#0fffc3] px-4 py-1 rounded-full font-semibold text-sm shadow hover:scale-105 transition">Flask</span>
+            <span class="bg-[#181f2e] text-[#0fffc3] px-4 py-1 rounded-full font-semibold text-sm shadow hover:scale-105 transition">Node.js</span>
+            <span class="bg-[#181f2e] text-[#0fffc3] px-4 py-1 rounded-full font-semibold text-sm shadow hover:scale-105 transition">SQLite</span>
+            <span class="bg-[#181f2e] text-[#0fffc3] px-4 py-1 rounded-full font-semibold text-sm shadow hover:scale-105 transition">MongoDB</span>
+            <span class="bg-[#181f2e] text-[#0fffc3] px-4 py-1 rounded-full font-semibold text-sm shadow hover:scale-105 transition">Spark SQL</span>
+            <span class="bg-[#181f2e] text-[#0fffc3] px-4 py-1 rounded-full font-semibold text-sm shadow hover:scale-105 transition">pandas</span>
+            <span class="bg-[#181f2e] text-[#0fffc3] px-4 py-1 rounded-full font-semibold text-sm shadow hover:scale-105 transition">Git</span>
+            <span class="bg-[#181f2e] text-[#0fffc3] px-4 py-1 rounded-full font-semibold text-sm shadow hover:scale-105 transition">GitHub</span>
+            <span class="bg-[#181f2e] text-[#0fffc3] px-4 py-1 rounded-full font-semibold text-sm shadow hover:scale-105 transition">VS Code</span>
+            <span class="bg-[#181f2e] text-[#0fffc3] px-4 py-1 rounded-full font-semibold text-sm shadow hover:scale-105 transition">Google Colab</span>
+            <span class="bg-[#181f2e] text-[#0fffc3] px-4 py-1 rounded-full font-semibold text-sm shadow hover:scale-105 transition">draw.io</span>
+            <span class="bg-[#181f2e] text-[#0fffc3] px-4 py-1 rounded-full font-semibold text-sm shadow hover:scale-105 transition">DSA</span>
+            <span class="bg-[#181f2e] text-[#0fffc3] px-4 py-1 rounded-full font-semibold text-sm shadow hover:scale-105 transition">AI/ML</span>
+            <span class="bg-[#181f2e] text-[#0fffc3] px-4 py-1 rounded-full font-semibold text-sm shadow hover:scale-105 transition">Web Dev</span>
 
-                <div class="research-card">
-                    <div class="research-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3 class="research-title">Fraud Detection with ML</h3>
-                    <p class="research-description">
-                        Conducted research on fraud detection using machine learning models with 
-                        advanced techniques for handling missing data. Implemented robust algorithms 
-                        for pattern recognition and anomaly detection.
-                    </p>
-                    <div class="research-tech">
-                        <span class="tech-tag">Machine Learning</span>
-                        <span class="tech-tag">Data Analysis</span>
-                        <span class="tech-tag">Python</span>
-                    </div>
-                </div>
-
-                <div class="research-card">
-                    <div class="research-icon">
-                        <i class="fas fa-hospital"></i>
-                    </div>
-                    <h3 class="research-title">Hospital Queue Management</h3>
-                    <p class="research-description">
-                        Designed and implemented a hospital queue management system that simulates 
-                        patient flow and optimizes waiting times. Used Python and SQL for data 
-                        management and queue optimization algorithms.
-                    </p>
-                    <div class="research-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">SQL</span>
-                        <span class="tech-tag">Simulation</span>
-                    </div>
-                </div>
-            </div>
+            <span class="bg-[#181f2e] text-[#0fffc3] px-4 py-1 rounded-full font-semibold text-sm shadow hover:scale-105 transition">Cybersecurity Basics</span>
         </div>
     </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="experience">
-        <div class="container">
-            <h2 class="section-title">Experience</h2>
-            <div class="experience-content">
-                <div class="experience-card">
-                    <div class="experience-header">
-                        <h3 class="experience-title">Computer Science Student</h3>
-                        <span class="experience-period">2022 - Present</span>
-                    </div>
-                    <div class="experience-description">
-                        <ul>
-                            <li>Completed multiple college assignments and projects focused on AI, software development, and data structures</li>
-                            <li>Strengthened programming and problem-solving skills through rigorous academic work</li>
-                            <li>Developed expertise in frontend development, AI/ML, and database management</li>
-                            <li>Collaborated on team projects demonstrating strong communication and technical skills</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <p class="contact-intro">
-                        I'm always interested in new opportunities, collaborations, and interesting projects. 
-                        Let's connect and build something amazing together!
-                    </p>
-                    <div class="contact-links">
-                        <a href="mailto:yadavvshubham0102@gmail.com" class="contact-link">
-                            <i class="fas fa-envelope"></i>
-                            <span>yadavvshubham0102@gmail.com</span>
-                        </a>
-                        <a href="https://linkedin.com/in/shubham-yadav-4b9235331" target="_blank" rel="noopener noreferrer" class="contact-link">
-                            <i class="fab fa-linkedin"></i>
-                            <span>linkedin.com/in/shubham-yadav-4b9235331</span>
-                        </a>
-                        <a href="https://github.com/Shubham-0102" target="_blank" rel="noopener noreferrer" class="contact-link">
-                            <i class="fab fa-github"></i>
-                            <span>github.com/Shubham-0102</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" id="email" name="email" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </form>
-                </div>
-            </div>
-        </div>
+    <!-- Certifications Section -->
+    <section id="certs" class="max-w-3xl mx-auto py-16 px-4" data-aos="fade-up">
+        <h2 class="text-2xl md:text-3xl font-bold mb-8 text-[#0fffc3] text-center">Certifications & Workshops</h2>
+        <ul class="space-y-4">
+            <li class="bg-[#181f2e] rounded-xl p-5 shadow border border-[#232b3e] flex items-center gap-3"><span class="text-green-400 text-xl">✔</span> <span class="font-semibold text-slate-100">"LinkedIn or Locked Out" Career Session</span> <span class="text-slate-400">– Optimized LinkedIn</span></li>
+            <li class="bg-[#181f2e] rounded-xl p-5 shadow border border-[#232b3e] flex items-center gap-3"><span class="text-green-400 text-xl">✔</span> <span class="font-semibold text-slate-100">DSA Feedback Session</span> <span class="text-slate-400">– Achieved distinction-level report</span></li>
+        </ul>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <p>&copy; 2024 Shubham Yadav. All rights reserved.</p>
-                <p>Built with ❤️ and modern web technologies</p>
+    <footer id="contact" class="bg-[#10182a] py-10 mt-10 border-t border-[#1a1f3c]">
+        <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 px-4">
+            <div class="text-slate-400 text-center md:text-left">
+                <div class="font-bold text-lg text-[#0fffc3] mb-1">Contact</div>
+                <div>Email: <a href="mailto:yadavvshubham0102@gmail.com" class="text-[#0fffc3] hover:underline">yadavvshubham0102@gmail.com</a></div>
+            </div>
+            <div class="flex gap-4">
+                <a href="https://linkedin.com/in/shubham-yadav-4b9235331" target="_blank" rel="noopener noreferrer" class="group">
+                    <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-[#181f2e] shadow transition-all group-hover:shadow-[0_0_12px_2px_#0fffc3]">
+                        <svg class="w-6 h-6 text-[#0fffc3] group-hover:text-[#3b82f6] transition" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.28c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zm15.5 11.28h-3v-5.6c0-1.34-.03-3.07-1.87-3.07-1.87 0-2.16 1.46-2.16 2.97v5.7h-3v-10h2.89v1.36h.04c.4-.75 1.38-1.54 2.84-1.54 3.04 0 3.6 2 3.6 4.59v5.59z"/>
+                        </svg>
+                    </span>
+                </a>
+                <a href="https://github.com/Shubham-0102" target="_blank" rel="noopener noreferrer" class="group">
+                    <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-[#181f2e] shadow transition-all group-hover:shadow-[0_0_12px_2px_#3b82f6]">
+                        <svg class="w-6 h-6 text-[#3b82f6] group-hover:text-[#0fffc3] transition" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.34-1.3-1.7-1.3-1.7-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.74-1.56-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 012.9-.39c.99.01 1.99.13 2.9.39 2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.69 5.41-5.25 5.7.42.36.79 1.09.79 2.2 0 1.59-.01 2.87-.01 3.26 0 .31.21.68.8.56C20.71 21.39 24 17.08 24 12c0-6.27-5.23-11.5-12-11.5z"/>
+                        </svg>
+                    </span>
+                </a>
             </div>
         </div>
+        <div class="text-center text-slate-600 text-xs mt-6">&copy; 2024 Shubham Yadav. All rights reserved.</div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+    </script>
 </body>
 </html> 
